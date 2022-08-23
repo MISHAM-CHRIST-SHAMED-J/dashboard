@@ -78,7 +78,7 @@ let userDelete = async(id)=>{
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">User Table</h1>
-                        <Link to="/portal/create-user" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <Link to="/create-user" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i>Create User</Link>
                     </div>
    
@@ -119,8 +119,8 @@ let userDelete = async(id)=>{
                             <td>{item.Startdate}</td>
                             <td>{item.Salary}</td>
                             <td>
-<Link to={`/portal/user/${item.id}`} className='btn btn-sm btn-warning mr-1'>View</Link>
-<Link to={`/portal/user/edit/${item.id}`} className='btn btn-sm btn-success  mr-1' >Edit</Link>
+<Link to={`/user/${item.id}`} className='btn btn-sm btn-warning mr-1'>View</Link>
+<Link to={`/user/edit/${item.id}`} className='btn btn-sm btn-success  mr-1' >Edit</Link>
 <button onClick={()=>{userDelete(item.id)}} className='btn btn-sm btn-danger  mr-1' >delete</button>
                             </td>
                         </tr>

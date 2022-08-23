@@ -5,7 +5,7 @@ function Sidebar() {
   return (
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <Link class="sidebar-brand d-flex align-items-center justify-content-center" to="/portal">
+    <Link class="sidebar-brand d-flex align-items-center justify-content-center" to="/main">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -15,7 +15,7 @@ function Sidebar() {
     <hr class="sidebar-divider my-0"/>
 
     <li class="nav-item active">
-        <Link class="nav-link" to="/portal/dashboard">
+        <Link class="nav-link" to="/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></Link>
     </li>
@@ -23,14 +23,14 @@ function Sidebar() {
     <hr class="sidebar-divider"/>
 
     <li class="nav-item active">
-        <Link class="nav-link" to="/portal/user">
+        <Link class="nav-link" to="/user">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>User</span></Link>
     </li>
 
     <hr class="sidebar-divider"/>
     <li class="nav-item active">
-        <Link class="nav-link" to="/portal/product">
+        <Link class="nav-link" to="/product">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Product</span></Link>
     </li>

@@ -12,27 +12,34 @@ import {
   Route,
 } from "react-router-dom";
 import Createuser from './Createuser';
-import Login from './Login';
-import Portal from './Portal';
 import Userview from './Userview';
 import Edituser from './Edituser';
+import Welcome from './Welcome';
 
 
 function App() {
   return (
 
   <BrowserRouter>
+   <div className="wrapper">
+    <Sidebar></Sidebar>
+    <div id="content-wrapper" className="d-flex flex-column col-lg-10">
+    <div id="content">
+     <Navbar></Navbar>
     <Routes>
-      <Route path="/" element={<Login/>}/>
-      <Route path="/portal" element={<Portal/>}>
-      <Route path="dashboard" element={<Dashboard/>}/>
-      <Route path="user" element={<User/>}/>
-      <Route path='user/:id' element={<Userview/>}/>
-      <Route path='user/edit/:id' element={<Edituser/>}/>
-      <Route path="create-user" element={<Createuser/>}/>
-      <Route path="product" element={<Product/>}/>
-     </Route>
+     
+      <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/main" element={<Welcome/>}/>
+      <Route path="/user" element={<User/>}/>
+      <Route path='/user/:id' element={<Userview/>}/>
+      <Route path='/user/edit/:id' element={<Edituser/>}/>
+      <Route path="/create-user" element={<Createuser/>}/>
+      <Route path="/product" element={<Product/>}/>
+
     </Routes>
+    </div>
+    </div>
+    </div>
   </BrowserRouter>
   );
 }

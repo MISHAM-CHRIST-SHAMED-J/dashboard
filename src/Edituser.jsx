@@ -26,7 +26,7 @@ function Edituser() {
     },
     onSubmit : async(values)=>{
       await axios.put(`https://62b7f3ac03c36cb9b7c0002d.mockapi.io/misham/${params.id}`,values)
-      navigate("/portal/user")
+      navigate("/user")
       alert("user updated successfully")
     
     } });
