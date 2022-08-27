@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { faFontAwesome } from '@fortawesome/free-solid-svg-icons';
-import { faFontAwesomeFlag } from '@fortawesome/free-solid-svg-icons';
-import { fasolid } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -13,25 +10,23 @@ function User() {
     
     useEffect(()=>{
         loadData()
+        
        },[])
      
        let loadData = async() =>{
         setLoading(true)
-      let users= await axios.get("https://62b7f3ac03c36cb9b7c0002d.mockapi.io/misham")
+      let users= await axios.get("https://630a16213249910032803b78.mockapi.io/misham")
       console.log(users.data)
       setUsers(users.data)
       setLoading(false)
        }
 let userDelete = async(id)=>{
  try{
-    let ask = window.confirm("Are you sure")
-    if(ask){
-        await axios.delete(`https://62b7f3ac03c36cb9b7c0002d.mockapi.io/misham/${id}`) 
+    let ask123 = window.confirm("Are you sure")
+    if(ask123){
+        await axios.delete(`https://630a16213249910032803b78.mockapi.io/misham/${id}`) 
         loadData()
-   
     }
-    
-    
  }
  catch(error){}
 }

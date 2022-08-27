@@ -25,7 +25,7 @@ function Edituser() {
       return error
     },
     onSubmit : async(values)=>{
-      await axios.put(`https://62b7f3ac03c36cb9b7c0002d.mockapi.io/misham/${params.id}`,values)
+      await axios.put(`https://630a16213249910032803b78.mockapi.io/misham/${params.id}`,values)
       navigate("/user")
       alert("user updated successfully")
     
@@ -39,7 +39,7 @@ function Edituser() {
   
     let loadUser=async()=>{
       try{
-        let user = await axios.get(`https://62b7f3ac03c36cb9b7c0002d.mockapi.io/misham/${params.id}`)
+        let user = await axios.get(`https://630a16213249910032803b78.mockapi.io/misham/${params.id}`)
         formik.setValues({
           Name:user.data.Name,
           Position:user.data.Position,

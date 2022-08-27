@@ -13,3 +13,31 @@
     justify-content: center;
     align-items: center;
 }
+.miz{
+    width: 180px;
+    border-radius: 10px;
+}
+.sam{
+    background-color: #efefef;
+}
+.pra{
+    border-radius: 15px;
+}
+.bhu{
+    background-color: #9de2ff;
+}
+.phi{
+    color: #2b2a2a;
+}
+.center{
+    justify-content: center;
+}
+.message{
+width: 100px;
+height: 350px;
+margin-top: 360px;
+background-color: rgb(206, 203, 199);
+color: black;
+border-radius: 20px;
+font-size: 25px;
+}
