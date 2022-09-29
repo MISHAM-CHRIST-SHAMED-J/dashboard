@@ -12,7 +12,7 @@ useEffect(()=>{
 
 let loadUser = async()=>{
   try{
-   let user = await axios.get(`https://630a16213249910032803b78.mockapi.io/misham/${params.id}`)
+   let user = await axios.get(`http://localhost:5500/home/${params.id}`)
    console.log(user.data)
    setUserData(user.data)
    

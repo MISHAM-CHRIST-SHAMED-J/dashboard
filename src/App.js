@@ -1,8 +1,6 @@
 import './App.css';
 import './sb-admin-2.css'
 import './sb-admin-2.min.css'
-import Sidebar from './sidebar';
-import Navbar from './Navbar';
 import Dashboard from './Dashboard';
 import User from './User';
 import Product from './Product';
@@ -19,33 +17,32 @@ import Profile from './Profile';
 import Productview from './Productview';
 import Createproduct from './Createproduct';
 import Editproduct from './Editproduct';
+import Login from './Login';
+import Portal from './Portal';
+import Pagenot from './Pagenot';
 
 
 function App() {
   return (
 
   <BrowserRouter>
-    <div className="wrapper">
-    <Sidebar></Sidebar>
-    <div id="content-wrapper" className="d-flex flex-column col-lg-10">
-    <div id="content">
-    <Navbar></Navbar>
     <Routes>
-    <Route path="/dashboard" element={<Dashboard/>}/>
-    <Route path="/" element={<Welcome/>}/>
-    <Route path="/user" element={<User/>}/>
-    <Route path='/user/:id' element={<Userview/>}/>
-    <Route path='/user/edit/:id' element={<Edituser/>}/>
-    <Route path="/create-user" element={<Createuser/>}/>
-    <Route path="/product" element={<Product/>}/>
-    <Route path="/product/:id" element={<Productview/>}/>
-    <Route path="/product/edit/:id" element={<Editproduct/>}/>
-    <Route path="/Creatpro" element={<Createproduct/>}/>
-    <Route path="/profile" element={<Profile/>}/>
+    <Route path="/" element={<Login/>}/>
+    <Route path="/portal" element={<Portal/>}>
+    <Route path="dashboard" element={<Dashboard/>}/>
+    <Route path="welcome" element={<Welcome/>}/>
+    <Route path="user" element={<User/>}/>
+    <Route path='user/:id' element={<Userview/>}/>
+    <Route path='user/edit/:id' element={<Edituser/>}/>
+    <Route path="create-user" element={<Createuser/>}/>
+    <Route path="product" element={<Product/>}/>
+    <Route path="product/:id" element={<Productview/>}/>
+    <Route path="product/edit/:id" element={<Editproduct/>}/>
+    <Route path="Creatpro" element={<Createproduct/>}/>
+    <Route path="profile" element={<Profile/>}/>
+    </Route> 
+    <Route path="*" element={<Pagenot/>}/>
     </Routes> 
-    </div>
-    </div>
-    </div>
   </BrowserRouter>
   );
 }

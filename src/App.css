@@ -9,6 +9,31 @@
 
 
 }
+.wrapperlogin{
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.loginbtn{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background:rgb(64, 133, 238);
+    color:#fff;
+    
+}
+.loadinggif{
+    width: 23%;
+}
+.btnlogin{
+    display: flex;
+    justify-content: center;
+}
+
+
 .img{
     justify-content: center;
     align-items: center;
@@ -40,4 +65,14 @@ background-color: rgb(206, 203, 199);
 color: black;
 border-radius: 20px;
 font-size: 25px;
+}
+.pogo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pogo img{
+    width: 500px;
 }

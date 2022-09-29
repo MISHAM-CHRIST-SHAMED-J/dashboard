@@ -27,7 +27,7 @@ function Createuser() {
       return error
     },
     onSubmit : async(values)=>{
-    await axios.post("https://630a16213249910032803b78.mockapi.io/misham",values)
+    await axios.post("http://localhost:5500/user",values)
      alert("User Credential")
      navigate("/user")
 

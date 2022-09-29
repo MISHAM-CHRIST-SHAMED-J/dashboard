@@ -1,8 +1,17 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 function Navbar() {
+    const navigate= useNavigate()
+
+    
+
+    let logout=()=>{
+        window.localStorage.removeItem("appToken")
+        navigate("/")
+    }
 
   return (
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -101,7 +110,8 @@ function Navbar() {
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
-                                <span class="badge badge-danger badge-counter">7</span>
+                                <Link class="img-profile rounded-circle"
+                                    to="/portal/profile">Profile</Link>
                             </a>
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
@@ -165,8 +175,9 @@ function Navbar() {
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <Link class="img-profile rounded-circle"
-                                    to="/profile">Profile</Link>
+                                <button class="btn btn-danger" onClick={logout}
+                                   >Logout</button>
+                                     
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">

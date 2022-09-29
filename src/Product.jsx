@@ -10,7 +10,7 @@ const [product1,setProduct1]=useState([]);
 
 useEffect(()=>{
   loadData()
-})
+},[])
   
 const loadData =async()=>{
 let user = await axios.get("https://630a16213249910032803b78.mockapi.io/shibin")
@@ -38,7 +38,7 @@ const deleteProduct=async(id)=>{
     <div class='container-fluid king'>
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Product Table</h1>
-                        <Link to="/Creatpro" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <Link to="/portal/Creatpro" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i>Create Product</Link>
                     </div>
     {
@@ -56,8 +56,8 @@ const deleteProduct=async(id)=>{
                   <div class='cvp'>
                       <h5 class="card-title font-weight-bold">{item.product}</h5>
                       <p class="card-text">{item.price}</p>
-                      <Link to={`/product/${item.id}`} class="btn details px-auto">View</Link><br />
-                      <Link to={`/product/edit/${item.id}`} class="btn cart px-auto">Edit</Link>
+                      <Link to={`/portal/product/${item.id}`} class="btn details px-auto">View</Link><br />
+                      <Link to={`/portal/product/edit/${item.id}`} class="btn cart px-auto">Edit</Link>
                       <button onClick={()=>{deleteProduct(item.id)}}>Delete</button>
       
                       </div>
